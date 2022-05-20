@@ -34,6 +34,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     display: flex;
+    justify-content: center;
     align-items: center;
 }
 
@@ -46,7 +47,7 @@ main {
 
 .card {
     min-width: 88%;
-    max-width: 88%;
+    max-width: 90%;
     background: #fff;
     display: flex; 
     flex-direction: column;
@@ -54,6 +55,7 @@ main {
     border-radius: 1.2rem;
     text-align: center;
     padding: 0 1.5rem 0;
+    margin-bottom: 3rem ;
 }
 
 h1 {
@@ -62,20 +64,30 @@ h1 {
 }
 
 .card .image {
-    display: block;
-    margin-top: -37%;
-    width: 80%;
     position: relative;
 }
 
+.card .image .mobile {
+    display: block;
+    /* margin-top: -39%; */
+    width: 90%;
+    margin: -41% auto 5%;
+}
+
+.card .image .desktop, .card .image .desktop2, .card .image .desktop3 {
+    display: none;
+}
+
+
 .bg-mobile {
     position: absolute;
-    bottom: -2rem;
-    left: -0.4rem;
+    bottom: -1.5rem;
+    left: 0.1rem;
 }
 
 .main-text {
-    margin-top: 4rem;
+    margin-top: 5em;
+    margin-bottom: 2rem;
 }
 
 .header {
@@ -88,12 +100,104 @@ h1 {
     align-items: center;
 }
 
+.header-text {
+    margin-right: 4px;
+}
+
+.header.last-child {
+    border-bottom: none;
+}
+
 .body-text {
     padding: 1rem 0;
     text-align: left;
     font-size: 14px;
+    word-break: keep-all;
 }
 
+
 .hidden {
-    /* display: none; */
+    display: none;
+}
+
+/* Media Queries */
+
+/* Desktop mode */
+@media (min-width: 700px) {
+    main {
+        width: 90%;
+    }
+    .card {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+    }
+
+    .card .image .mobile {
+        /* width: 100%; */
+        margin: 0;
+        display: none;
+    }
+
+    .card .image .desktop {
+        display: block;
+        width: 280px;
+        margin-left: -70px;
+        overflow-x:hidden;
+    }
+
+    .card .image .desktop2 {
+        display: block;
+        position: absolute;
+        width: 5.3rem;
+        bottom: 2rem;
+        left: -4rem;
+    }
+
+    .card .image .desktop3 {
+        display: block;
+        width: 280px;
+        position: absolute;
+        bottom: -2rem;
+        left: -4rem;
+    }
+
+    .bg-mobile {
+        display: none;
+    }
+
+    .main-text {
+        padding-right: 4rem;
+        text-align: left;
+    }
+
+    .header-text {
+        margin-right: 15px;
+    }
+}
+
+/* Medium screens */
+
+@media (min-width:970px) {
+    .main-text {
+        width: 60%;
+    }
+
+    .card .image .desktop, .card .image .desktop3 {
+        width: 360px;
+    }
+
+    .card .image .desktop2 {
+        width: 6.4rem;
+        bottom: 2.8rem;
+        left: -3.6rem;
+    }
+}
+
+@media (min-width:720px) {
+    .main-text {
+        padding-right: 5px;
+    }
 }
