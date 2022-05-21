@@ -88,6 +88,7 @@ h1 {
 .main-text {
     margin-top: 5em;
     margin-bottom: 2rem;
+    max-width: 300px;
 }
 
 .header {
@@ -98,32 +99,46 @@ h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    cursor: pointer;
 }
 
 .header-text {
     margin-right: 4px;
 }
 
+.header-text.bold {
+    /* font-weight: 700; */
+}
+
+.header-text:hover {
+    color: var(--soft-red);
+    font-weight: 700;
+}
+
 .header.last-child {
     border-bottom: none;
+}
+
+.arrow.rotate {
+    transform: rotate(180deg);
 }
 
 .body-text {
     padding: 1rem 0;
     text-align: left;
     font-size: 14px;
-    word-break: keep-all;
+    /* word-break: keep-all; */
 }
 
 
-.hidden {
+.body-text.hidden {
     display: none;
 }
 
 /* Media Queries */
 
 /* Desktop mode */
-@media (min-width: 700px) {
+@media (min-width: 650px) {
     main {
         width: 90%;
     }
@@ -132,7 +147,8 @@ h1 {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        width: 90%;
+        width: 90rem;
+        padding-left: 0;
     }
 
     .card .image .mobile {
@@ -141,11 +157,14 @@ h1 {
         display: none;
     }
 
+    .image {
+        transform: translateX(0.4rem);
+    }
+
     .card .image .desktop {
         display: block;
         width: 280px;
         margin-left: -70px;
-        overflow-x:hidden;
     }
 
     .card .image .desktop2 {
@@ -169,7 +188,8 @@ h1 {
     }
 
     .main-text {
-        padding-right: 4rem;
+        padding-right: 2rem;
+        padding-left: 2rem;
         text-align: left;
     }
 
@@ -182,7 +202,7 @@ h1 {
 
 @media (min-width:970px) {
     .main-text {
-        width: 60%;
+        width: 600px;
     }
 
     .card .image .desktop, .card .image .desktop3 {
@@ -198,6 +218,7 @@ h1 {
 
 @media (min-width:720px) {
     .main-text {
-        padding-right: 5px;
+        padding-right: 3px;
+        width: 400px;
     }
 }
