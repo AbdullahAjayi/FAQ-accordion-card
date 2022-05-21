@@ -210,9 +210,15 @@ h1 {
         margin-right: 15px;
         font-size: 16px;
     }
+
+    .body-text {
+        font-size: 14px;
+        font-weight: 400;
+    }
 }
 
-/* Medium screens */
+/* Media resolution used here were different from the one used now (just had to change them after almost coding this) 
+Take some measurements here with a pinch of salt  */
 
 @media (min-width:970px) {
     .main-text {
