@@ -1,10 +1,5 @@
-const accordion = document.querySelector('.header');
-const faqAnswer = document.querySelector('.body-text');
-const faqArrow = document.querySelector('.arrow');
-
-accordion.addEventListener('click', onClick);
-
-function onClick() {
-    faqAnswer.classList.toggle('hidden');
-    faqArrow.classList.toggle('rotate')
-}
+const  accordion =  document.querySelectorAll('.header');
+ accordion.forEach(header => header.addEventListener('click', (e) => {
+    
+    header.parentElement.classList.toggle('open');
+ } ))
