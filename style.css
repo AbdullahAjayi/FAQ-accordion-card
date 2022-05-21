@@ -200,9 +200,10 @@ h1 {
 
 /* Medium screens */
 
-@media (min-width:970px) {
+@media (min-width:950px) {
     .main-text {
-        width: 600px;
+        min-width: 400px;
+        margin-right: 3rem;
     }
 
     .card .image .desktop, .card .image .desktop3 {
