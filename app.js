@@ -11,9 +11,9 @@ const  accordion =  document.querySelectorAll('.header');
        header.parentElement.classList.remove('open')
     });
 
+    e.target.parentElement.classList.toggle('open');
+
     if(e.target.classList.contains('header-text') || e.target.classList.contains('arrow')) {
       e.target.parentElement.parentElement.classList.toggle('open');
-    } else {
-       e.target.parentElement.classList.toggle('open');
     }
  }
